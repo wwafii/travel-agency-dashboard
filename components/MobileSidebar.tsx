@@ -13,8 +13,8 @@ const MobileSidebar = () => {
     <div className="mobile-sidebar wrapper">
       <header>
         <Link to="/">
-          <img src="/assets/icons/logo.svg" alt="Logo" className="size-[30px]" />
-          <h1>Tripz</h1>
+          <img src="/assets/icons/logo.svg" alt="Logo" className="size-[50px] mr-1" />
+          <h1 className='text-3xl font-bold'>Tripz</h1>
         </Link>
         <button onClick={toggleSidebar}>
           <img src="/assets/icons/menu.svg" alt="menu" className="size-7" />
