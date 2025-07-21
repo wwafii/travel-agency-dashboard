@@ -6,8 +6,6 @@ import type { Route } from './+types/dashboard'
 
 export const clientLoader = async () => await getUser();
 
-
-
 const dashboard = ({ loaderData }:  Route.ComponentProps ) => {
 
   const user = loaderData as User | null;
