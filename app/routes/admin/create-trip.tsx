@@ -27,7 +27,7 @@ const CreateTrip = ({ loaderData }: Route.ComponentProps ) => {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState<TripFormData>({
-        country: countries[0]?.name || '',
+        country: countries[0]?.value || '',
         travelStyle: '',
         interest: '',
         budget: '',
@@ -103,7 +103,7 @@ const CreateTrip = ({ loaderData }: Route.ComponentProps ) => {
         {
             country: formData.country,
             color: '#EA382E',
-            coordinates: countries.find((c: Country) => c.name === formData.country)?.coordinates || []
+            coordinates: countries.find((c: Country) => c.value === formData.country)?.coordinates || []
         }
     ]
 
