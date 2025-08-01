@@ -92,14 +92,14 @@ export const action = async ({ request }: ActionFunctionArgs) => {
         )
 
         const tripDetail = parseTripData(result.tripDetails) as Trip;
-        const tripPrice = parseInt(tripDetail.estimatedPrice.replace('$', ''), 10)
+        // const tripPrice = parseInt(tripDetail.estimatedPrice.replace('$', ''), 10)
         
 
-        await database.updateDocument(
-            appwriteConfig.databaseId,
-            appwriteConfig.tripCollectionId,
-            result.$id,
-        )
+        // await database.updateDocument(
+        //     appwriteConfig.databaseId,
+        //     appwriteConfig.tripCollectionId,
+        //     result.$id,
+        // )
 
         return data({ id: result.$id })
     } catch (e) {
